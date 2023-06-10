@@ -1,0 +1,9 @@
+# Ignore build output
+/dist/
+/out/
+
+# Ignore dependencies
+/node_modules/
+
+# Ignore package-lock.json
+/package-lock.json

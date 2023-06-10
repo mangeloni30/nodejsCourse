@@ -1,5 +1,4 @@
 const fs = require ("fs");
-const form = require("./form.html");
 
 const requestHandler = (req, res) => {
   console.log("req.method ==> ", req.method);
@@ -8,11 +7,10 @@ const requestHandler = (req, res) => {
   const url = req.url;
   const method = req.method;
   if (url === "/") {
-    // res.write("<html>");
-    // res.write("<head><title>Enter a message</title></head>");
-    // res.write("<body><form action='/message' method='POST'><input type='text' name='nessage'><button type='submit'>Send</button></form></body>");
-    // res.write("</html>");
-    res.write(form);
+    res.write("<html>");
+    res.write("<head><title>Enter a message</title></head>");
+    res.write("<body><form action='/message' method='POST'><input type='text' name='nessage'><button type='submit'>Send</button></form></body>");
+    res.write("</html>");
     return res.end();
   }
   if (url === "/message" && method === "POST") {
